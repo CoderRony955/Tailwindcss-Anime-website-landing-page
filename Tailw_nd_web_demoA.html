@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to anime land</title>
+    <link rel="shortcut icon" href="animelogo-removebg-preview.png">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: red;
+        }
+
+        .navigation {
+            background-image: linear-gradient(rgb(21, 1, 235), rgb(0, 179, 255));
+        }
+
+        .mobile-menu {
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(-100%);
+        }
+
+        .mobile-menu.open {
+            transform: translateX(0%);
+        }
+
+        .hero {
+            background-image: url('https://cdn.pixabay.com/photo/2022/12/01/04/34/sunset-7628289_1280.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            /* Adjust height as needed */
+            background-attachment: fixed;
+        }
+
+        .hero .hero-heading {
+            text-shadow: 4px 5px 3px rgb(0, 0, 0);
+            font-family: monospace;
+            font-weight: bold;
+        }
+
+        .hero-para {
+            font-family: cursive;
+            color: aliceblue;
+            text-shadow: 4px 5px 3px rgb(0, 0, 0);
+            font-size: 20px;
+        }
+
+        .img-sec {
+            background-image: linear-gradient(rgb(0, 208, 255), rgb(0, 4, 255));
+        }
+
+        .slider {
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            flex: 0 0 100%;
+            text-align: center;
+            padding: 20px;
+            justify-content: center;
+            display: flex;
+        }
+
+        .features {
+            background-image: linear-gradient(rgb(246, 255, 0), rgb(255, 0, 0));
+        }
+
+        .carsoul {
+            background-image: url(demon\ salyer\ gif.gif);
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .carsoul-2 {
+            background-image: url(anime\ boy.gif);
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .offer-tab {
+            background-image: radial-gradient(blue, rgb(0, 242, 255));
+        }
+
+        .know-about-us {
+            background-image: url(https://wallpapers.com/images/high/red-and-black-anime-olcqp934lcn1bgq5.webp);
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .anime-blogs {
+            background-image: linear-gradient(rgb(255, 255, 0), rgb(0, 213, 255));
+        }
+
+        .footer-area {
+            background-image: linear-gradient(rgb(5, 0, 45), rgb(4, 4, 4));
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- =====================
+NAV-BAR-SECTION
+=================================  -->
+    <section class="navigation">
+        <nav class="last:py-4">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="flex justify-between">
+                    <div class="flex items-center">
+                        <a href="#" class="flex items-center text-white text-xl font-semibold">
+                            <img src="animelogo-removebg-preview.png" alt="Logo" class="h-12 mr-2">
+                        </a>
+                    </div>
+                    <div class="flex items-center md:hidden">
+                        <button id="menu-toggle" class="text-white focus:outline-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="hidden md:flex items-center space-x-4">
+                        <a href="#"
+                            class="text-black font-bold active:text-blue-950 bg-blue-400 hover:bg-sky-600 rounded-full p-3 px-8 hover:text-gray-300 hover:scale-110 transition-transform duration-300">Home</a>
+                        <a href="#"
+                            class="text-black font-bold active:text-blue-950 bg-blue-400  hover:bg-sky-600 rounded-full p-3 px-8 hover:text-gray-300 hover:scale-110 transition-transform duration-300">About</a>
+                        <a href="/Tailwind_web_demo_Mainsection.html"
+                            class="text-black font-bold active:text-blue-950 bg-blue-400  hover:bg-sky-600 rounded-full p-3 px-8 hover:text-gray-300 hover:scale-110 transition-transform duration-300">Animes</a>
+                        <a href="#"
+                            class="text-black font-bold active:text-blue-950 bg-blue-400  hover:bg-sky-600 rounded-full p-3 hover:text-gray-300 px-8 hover:scale-110 transition-transform duration-300">Contact</a>
+                    </div>
+                    <div class="hidden md:flex items-center space-x-4 sm:mr-4">
+                        <button
+                            class="bg-transparent hover:bg-blue-300 text-white font-mono rounded-full hover:text-white py-2 mr-4 px-4 border border-white  transition duration-300">Login</button>
+                        <button
+                            class="bg-blue-900 text-white font-mono  hover:bg-sky-700 py-2 px-4 border border-blue-300 rounded-full transition duration-300">Sign
+                            Up</button>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu" class="md:hidden hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                    <a href="#"
+                        class="block px-3 py-2 rounded-full text-base  text-black font-mono font-bold active:bg-indigo-500 hover:bg-sky-300 bg-blue-300 hover:scale-105 transition-transform duration-300 ">Home</a>
+                    <a href="#"
+                        class="block px-3 py-2 rounded-full text-base  text-black font-mono font-bold active:bg-indigo-500 hover:bg-sky-400 bg-blue-400  hover:scale-105 transition-transform duration-300">About</a>
+                    <a href="/Tailwind_web_demo_Mainsection.html"
+                        class="block px-3 py-2 rounded-full text-base text-black font-mono font-bold active:bg-indigo-500 hover:bg-sky-500 bg-blue-500  hover:scale-105 transition-transform duration-300">Animes</a>
+                    <a href="#"
+                        class="block px-3 py-2 rounded-full text-base  text-black font-mono font-bold active:bg-indigo-500 hover:bg-sky-600 bg-blue-600 hover:scale-105 transition-transform duration-300">Contact</a>
+                </div>
+                <div class="pt-4 pb-3 border-t">
+                    <div class="flex items-center px-5">
+                        <a href=""><button
+                                class="bg-transparent hover:bg-blue-300 text-white font-mono rounded-full hover:text-white py-2 mr-4 px-4 border border-white  transition duration-300">Login</button></a>
+
+                        <a href=""><button
+                                class="bg-blue-900 text-white font-mono  hover:bg-sky-700 py-2 px-4 border border-blue-300 rounded-full transition duration-300">Sign
+                                Up</button></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <!-- =================
+    HERO-SLIDEBAR-SECTION
+    =================  -->
+    <section class="hero">
+        <div class="hero flex items-center justify-center text-white">
+            <div class=" py-16 text-center">
+                <h1 class="hero-heading text-5xl font-bold text-white mb-4">Welcome to Anime Land</h1>
+                <p class="hero-para text-lg text-white">Discover amazing animes to meet your
+                    needs</p>
+                <a href="/Tailwind_web_demo_Mainsection.html"
+                    class="mt-8 inline-block font-mono px-6 py-3 bg-white text-blue-900 font-semibold rounded-lg shadow-lg hover:bg-yellow-200 hover:text-black transition duration-300">Explore
+                    Now</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- =======================
+Compelling imagery or video relevant to your website's purpose
+======================= -->
+
+    <!-- Image Section -->
+    <div class="img-sec rounded-b-3xl">
+        <section class="slider">
+            <h1 class="text-white text-center text-6xl font-mono font-bold mt-9"
+                style="text-shadow: 2px 4px 2px rgb(0, 0, 0);">Explore Amazing Animes fantasy
+            </h1>
+            <div class="slides">
+
+                <div class="slide"><img
+                        class="hover:scale-105 transition-transform duration-500 rounded-lg hover:contrast-150"
+                        src="https://cdn.pixabay.com/photo/2022/12/01/04/42/man-7628305_640.jpg" alt="Image 1"></div>
+
+                <div class="slide"><img
+                        class="hover:scale-105 transition-transform duration-500 rounded-lg hover:contrast-150"
+                        src="https://cdn.pixabay.com/photo/2017/04/24/09/25/horse-2255876_640.jpg" alt="Image 2"></div>
+
+                <div class="slide"><img
+                        class="hover:scale-105 transition-transform duration-500 rounded-lg hover:contrast-150"
+                        src="https://cdn.pixabay.com/photo/2022/12/09/05/04/christmas-7644625_640.jpg" alt="Image 3">
+                </div>
+
+                <div class="slide"><img
+                        class="hover:scale-105 transition-transform duration-500 rounded-lg hover:contrast-150"
+                        src="https://cdn.pixabay.com/photo/2022/12/01/04/44/girl-7628309_640.jpg" alt="Image 4"></div>
+
+
+
+
+            </div>
+
+        </section>
+
+
+        <h2 class="text-white  text-3xl font-bold mt-6 text-center"
+            style="font-family: cursive; text-shadow: 2px 2px 2px rgb(0, 0, 0);">Discover Our
+            Amazing Anime
+            arts</h2>
+
+        <!-- Video Section -->
+        <div class=" py-12">
+            <div class="container mx-auto flex flex-col items-center justify-center">
+                <iframe class="w-full max-w-3xl h-64 rounded-lg shadow-lg" src="https://www.youtube.com/embed/VIDEO_ID"
+                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <h2 class="text-white text-3xl font-bold mt-6 text-center"
+                    style="font-family: cursive; text-shadow: 2px 2px 2px rgb(0, 0, 0)">Watch Our
+                    Introduction Video</h2>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ========================
+FEATURES-SECTION
+========================  -->
+
+    <section class="features rounded-t-3xl rounded-b-3xl">
+
+        <div class="container mx-auto py-12">
+            <h2 class="text-3xl font-bold text-center mb-8"
+                style="font-family: cursive; text-shadow: 2px 5px 2px white;">Anime highlights of the week</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <a href="">
+                    <div
+                        class="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center hover:scale-95 transition-transform duration-500">
+                        <img src="https://wallpapers.com/images/high/kimetsu-no-yaiba-pictures-2z8h50sxtf91f2o2.webp"
+                            Feature 1 Image" class="w-20 h-20 mb-4 rounded-full">
+                        <h3 class="text-xl font-semibold mb-2 font-mono">Demon Slayer</h3>
+                        <p class="text-gray-600">See highlights of the week</p>
+                    </div>
+                </a>
+
+                <!-- Feature 2 -->
+                <a href="">
+                    <div
+                        class="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center hover:scale-95 transition-transform duration-500">
+                        <img src="https://wallpapers.com/images/high/beat-up-luffy-aesthetic-nv099azzsequ7qba.webp"
+                            Feature 1 Image" class="w-20 h-20 mb-4 rounded-full">
+                        <h3 class="text-xl font-semibold mb-2 font-mono">One Piece</h3>
+                        <p class="text-gray-600">See highlights of the week</p>
+                    </div>
+                </a>
+
+                <!-- Feature 3 -->
+                <a href="">
+                    <div
+                        class="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center hover:scale-95 transition-transform duration-500">
+                        <img src="https://wallpapers.com/images/high/adorable-anya-forger-spy-x-family-9g0jcr64ym775oxc.webp"
+                            Feature 1 Image" class="w-20 h-20 mb-4 rounded-full">
+                        <h3 class="text-xl font-semibold mb-2 font-mono">Spy x Family</h3>
+                        <p class="text-gray-600">See highlights of the week</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =======================
+Anime-section
+======================= -->
+    <section class="carsoul rounded-t-3xl rounded-b-3xl">
+        <div class="max-w-4xl mx-auto px-4 py-8">
+            <h2 class="text-4xl font-bold text-center mb-8 text-white"
+                style="font-family: cursive; text-shadow: 2px 2px 2px rgb(0, 0, 0);">Popular Anime Shows</h2>
+            <!-- Popular-animes-section  -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- anime-1 -->
+                <div
+                    class="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-500">
+                    <img src="https://wallpapers.com/images/high/demon-slayer-pictures-y2e8bg2dbwhm03yx.webp"
+                        alt="Product 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 font-mono mb-2">Demon Slayer</h3>
+                        <p class="text-gray-600" style="font-family: cursive;">The anime series <b>Demon Slayer</b> is
+                            based
+                            on the manga series of the
+                            same name written and illustrated by the Japanese manga artist, Masamune.</p>
+                        <a href="#"
+                            class="block mt-4 text-center bg-yellow-200 hover:bg-yellow-100  text-black font-mono font-semibold py-2 px-4 rounded-full">Learn
+                            More about this anime</a>
+                    </div>
+                </div>
+                <!-- anime-2 -->
+                <div
+                    class="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-500">
+                    <img src="https://t4.ftcdn.net/jpg/04/66/96/07/240_F_466960799_UjSYk2XvePE9HEt1R1LO54xOHoJRfSx7.jpg"
+                        alt="Product 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-mono font-semibold text-gray-800 mb-2">One Piece</h3>
+                        <p class="text-gray-600" style="font-family: cursive;"><b>One Piece</b> is a highly popular and
+                            long-running anime series created by Eiichiro Oda. </p>
+                        <a href="#"
+                            class="block mt-4 text-center bg-yellow-200 hover:bg-yellow-100  text-black font-mono font-semibold py-2 px-4 rounded-full">Learn
+                            More about this anime</a>
+                    </div>
+                </div>
+                <!-- anime-3 -->
+                <div
+                    class="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-500">
+                    <img src="https://wallpapers.com/images/high/anya-forger-on-a-walk-cxbn0gn01peg2kuk.webp"
+                        alt="Service 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-mono font-semibold text-gray-800 mb-2">Spy x Family</h3>
+                        <p class="text-gray-600" style="font-family: cursive;"><b>Spy x Family</b> is a manga series,
+                            not an
+                            anime. It is a popular Japanese manga written and illustrated by Tatsuya Endo.</p>
+                        <a href="#"
+                            class="block mt-4 text-center bg-yellow-200 hover:bg-yellow-100  text-black font-mono font-semibold py-2 px-4 rounded-full">Learn
+                            More about this anime</a>
+                    </div>
+                </div>
+                <!-- anime-4  -->
+                <div
+                    class="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-500">
+                    <img src="https://wallpapers.com/images/high/anime-all-characters-hd-hycia96qdrf7tsqi.webp"
+                        alt="Product 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-mono font-semibold text-gray-800 mb-2">Jujutsu Kaisen</h3>
+                        <p class="text-gray-600" style="font-family: cursive;"><b>Jujutsu Kaisen</b> is a popular
+                            Japanese
+                            manga and anime series written and illustrated by Gege Akutami. The series is known for its
+                            dark fantasy theme, intricate plot, and dynamic characters. </p>
+                        <a href="#"
+                            class="block mt-4 text-center bg-yellow-200 hover:bg-yellow-100  text-black font-mono font-semibold py-2 px-4 rounded-full">Learn
+                            More about this anime</a>
+                    </div>
+                </div>
+                <!-- anime-5  -->
+                <div
+                    class="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-500">
+                    <img src="https://wallpapers.com/images/high/vinland-saga-pictures-dikxzidsazb3dqzm.webp"
+                        alt="Service 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-mono font-semibold text-gray-800 mb-2">Vinland Saga</h3>
+                        <p class="text-gray-600" style="font-family: cursive;"><b>Vinland Saga</b> is an acclaimed anime
+                            series adapted from the manga of the same name by Makoto Yukimura.</p>
+                        <a href="#"
+                            class="block mt-4 text-center bg-yellow-200 hover:bg-yellow-100  text-black font-mono font-semibold py-2 px-4 rounded-full">Learn
+                            More about this anime</a>
+                    </div>
+                </div>
+                <!-- anime-6  -->
+                <div
+                    class="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-500">
+                    <img src="https://wallpapers.com/images/high/chainsaw-man-background-w356y4e8j34g5koa.webp"
+                        alt="Service 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-mono font-semibold text-gray-800 mb-2">Chainsaw Man</h3>
+                        <p class="text-gray-600" style="font-family: cursive;"><b>Chainsaw Man</b> is an anime series
+                            that has garnered a lot of attention for its unique and gripping storyline.</p>
+                        <a href="#"
+                            class="block mt-4 text-center bg-yellow-200 hover:bg-yellow-100  text-black font-mono font-semibold py-2 px-4 rounded-full">Learn
+                            More about this anime</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================
+OTHER-ANIMES-SHOWS
+========================  -->
+    <section class="carsoul-2 rounded-t-3xl rounded-b-3xl">
+        <div class="max-w-4xl mx-auto px-4 py-8">
+            <h2 class="text-4xl font-bold text-center mb-8 text-white"
+                style="font-family: cursive; text-shadow: 2px 2px 2px rgb(0, 0, 0);">Other Anime Shows</h2>
+            <!-- Popular-animes-section  -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- anime-1 -->
+                <div
+                    class="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-500">
+                    <img src="https://wallpapers.com/images/high/tokyo-revengers-manji-gang-members-78rofvindvky0rq3.webp"
+                        alt="Product 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 font-mono mb-2">Tokyo Revengers</h3>
+                        <p class="text-gray-600" style="font-family: cursive;"><b>Tokyo Revengers</b> is a gripping
+                            anime series that combines elements of action, drama, and science fiction with a unique take
+                            on time travel.</p>
+                        <a href="#"
+                            class="block mt-4 text-center bg-yellow-200 hover:bg-yellow-100  text-black font-mono font-semibold py-2 px-4 rounded-full">Learn
+                            More about this anime</a>
+                    </div>
+                </div>
+                <!-- anime-2 -->
+                <div
+                    class="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-500">
+                    <img src="https://wallpapers.com/images/high/naruto-baryon-mode-kurama-qbjkeuetdokock1x.webp"
+                        alt="Product 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-mono font-semibold text-gray-800 mb-2">Naruto</h3>
+                        <p class="text-gray-600" style="font-family: cursive;"><b>Naruto</b> is a beloved anime and
+                            manga series created by Masashi Kishimoto. </p>
+                        <a href="#"
+                            class="block mt-4 text-center bg-yellow-200 hover:bg-yellow-100  text-black font-mono font-semibold py-2 px-4 rounded-full">Learn
+                            More about this anime</a>
+                    </div>
+                </div>
+                <!-- anime-3 -->
+                <div
+                    class="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-500">
+                    <img src="https://wallpapers.com/images/hd/death-note-chained-apple-1qaye9anuouszu3s.webp"
+                        alt="Service 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-mono font-semibold text-gray-800 mb-2">Death Note</h3>
+                        <p class="text-gray-600" style="font-family: cursive;"><b>Death Note</b> is a highly acclaimed
+                            anime series based on the manga written by Tsugumi Ohba and illustrated by Takeshi Obata.
+                        </p>
+                        <a href="#"
+                            class="block mt-4 text-center bg-yellow-200 hover:bg-yellow-100  text-black font-mono font-semibold py-2 px-4 rounded-full">Learn
+                            More about this anime</a>
+                    </div>
+                </div>
+                <!-- anime-4  -->
+                <div
+                    class="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-500">
+                    <img src="https://wallpapers.com/images/high/fairy-tail-pictures-c4czfzldr0k1k629.webp"
+                        alt="Product 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-mono font-semibold text-gray-800 mb-2">Fairy tail</h3>
+                        <p class="text-gray-600" style="font-family: cursive;"><b>Fairy Tail</b> is an adventure and
+                            fantasy anime series that has captured the hearts of many fans around the world. </p>
+                        <a href="#"
+                            class="block mt-4 text-center bg-yellow-200 hover:bg-yellow-100  text-black font-mono font-semibold py-2 px-4 rounded-full">Learn
+                            More about this anime</a>
+                    </div>
+                </div>
+                <!-- anime-5  -->
+                <div
+                    class="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-500">
+                    <img src="https://wallpapers.com/images/high/genos-saitama-and-boros-one-punch-man-mobile-game-pnunm9k7fyxebz35.webp"
+                        alt="Service 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-mono font-semibold text-gray-800 mb-2">One Punch Man</h3>
+                        <p class="text-gray-600" style="font-family: cursive;"><b>One Punch Man</b> is an action-comedy
+                            anime that tells the story of Saitama, a superhero who can defeat any opponent with a single
+                            punch, leading to his ultimate boredom due to a lack of challenge.</p>
+                        <a href="#"
+                            class="block mt-4 text-center bg-yellow-200 hover:bg-yellow-100  text-black font-mono font-semibold py-2 px-4 rounded-full">Learn
+                            More about this anime</a>
+                    </div>
+                </div>
+                <!-- anime-6  -->
+                <div
+                    class="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-500">
+                    <img src="https://wallpapers.com/images/high/shin-chan-and-family-at-park-jlxmg8ru5n1o262e.webp"
+                        alt="Service 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-mono font-semibold text-gray-800 mb-2">Shinchan</h3>
+                        <p class="text-gray-600" style="font-family: cursive;"><b>Shinchan</b>, also known as Crayon
+                            Shin-chan, is a Japanese manga and anime series that has enjoyed widespread popularity.</p>
+                        <a href="#"
+                            class="block mt-4 text-center bg-yellow-200 hover:bg-yellow-100  text-black font-mono font-semibold py-2 px-4 rounded-full">Learn
+                            More about this anime</a>
+                    </div>
+                </div>
+                <!-- anime-7  -->
+                <div
+                    class="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-500">
+                    <img src="https://wallpapers.com/images/high/doraemon-and-friends-in-forest-yguggvzdf9ypcpzn.webp"
+                        alt="Service 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-mono font-semibold text-gray-800 mb-2">Doraemon</h3>
+                        <p class="text-gray-600" style="font-family: cursive;"><b>Doraemon</b> is a classic and beloved
+                            anime and manga series that has charmed audiences for decades.</p>
+                        <a href="#"
+                            class="block mt-4 text-center bg-yellow-200 hover:bg-yellow-100  text-black font-mono font-semibold py-2 px-4 rounded-full">Learn
+                            More about this anime</a>
+                    </div>
+                </div>
+                <!-- anime-8  -->
+                <div
+                    class="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-500">
+                    <img src="https://wallpapers.com/images/hd/dr-stone-powerful-skill-gesyqwczulgzv7j5.webp"
+                        alt="Service 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-mono font-semibold text-gray-800 mb-2">Dr.Stone</h3>
+                        <p class="text-gray-600" style="font-family: cursive;"><b>Dr. Stone</b> is an anime series that
+                            combines science fiction with adventure and is based on the manga written by Riichiro
+                            Inagaki and illustrated by Boichi.</p>
+                        <a href="#"
+                            class="block mt-4 text-center bg-yellow-200 hover:bg-yellow-100  text-black font-mono font-semibold py-2 px-4 rounded-full">Learn
+                            More about this anime</a>
+                    </div>
+                </div>
+                <!-- anime-9  -->
+                <div
+                    class="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-500">
+                    <img src="https://wallpapers.com/images/hd/hunter-x-hunter-gon-killua-leorio-and-kurapika-tck8prcwqau1see7.webp"
+                        alt="Service 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-mono font-semibold text-gray-800 mb-2">Hunter x Hunter</h3>
+                        <p class="text-gray-600" style="font-family: cursive;"><b>Hunter x Hunter</b> is an anime series
+                            that has captivated audiences with its intricate storytelling and deep character
+                            development.</p>
+                        <a href="#"
+                            class="block mt-4 text-center bg-yellow-200 hover:bg-yellow-100  text-black font-mono font-semibold py-2 px-4 rounded-full">Learn
+                            More about this anime</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- ==========================
+OFFER-TAB-SECTION
+==========================   -->
+    <section class="offer-tab rounded-t-3xl rounded-b-3xl">
+        <div class=" p-8">
+            <div class="max-w-2xl mx-auto text-center">
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <div class="md:w-1/2">
+                        <h2 class="text-3xl font-bold text-white"
+                            style="font-family: cursive; text-shadow: 2px 4px 4px #000;">Exclusive Offer</h2>
+                        <p class="mt-4 text-white font-mono">Sign up today and get access to our premium deals on new
+                            anime shows!</p>
+                        <button
+                            class="mt-8 rounded-3xl bg-yellow-300 hover:scale-110 transition-transform duration-300 hover:bg-yellow-400 text-black font-mono font-bold py-2 px-4 ">
+                            Sign Up Now
+                        </button>
+                    </div>
+                    <div class="md:w-1/2 mt-8 md:mt-0">
+                        <img class="rounded-lg object-cover object-center w-full h-64"
+                            src="https://wallpapers.com/images/high/cool-anime-gojo-satoru-yr8xo61zi3gus6dr.webp"
+                            alt="Special Offer">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =====================
+ANIME-BLOGS
+===================== -->
+    <section class="anime-blogs rounded-t-3xl rounded-b-3xl">
+        <div class="container mx-auto py-12">
+            <h2 class="text-3xl font-bold text-center mb-8"
+                style="font-family: cursive; text-shadow: 2px 4px 4px #000;">Check out latest blogs on Animes</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 hover:scale-95 transition-transform duration-500">
+                <!-- Blog Post 1 -->
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="https://media.tenor.com/abNqUX0okNwAAAAM/angry.gif" alt="Blog Post 1"
+                        class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2" style="font-family: cursive;">Checkout latest blogs on
+                            Demon slayer</h3>
+                        <p class="text-gray-600">
+                            "Demon Slayer: Kimetsu no Yaiba" is a wildly popular Japanese anime and manga series created
+                            by Koyoharu Gotouge.</p>
+                        <a href="#"
+                            class="text-white hover:bg-blue-500 mt-2 inline-block bg-blue-600 p-3 rounded-3xl ">Read
+                            more</a>
+                    </div>
+                </div>
+
+                <!-- Blog Post 2 -->
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="https://media.tenor.com/7AIuyFtFvY8AAAAM/loid-forger-spy-x-family.gif" alt="Blog Post 2"
+                        class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2" style="font-family: cursive;">Check out latest blogs on
+                            Spy x Family</h3>
+                        <p class="text-gray-600">
+                            "Spy x Family" is a popular manga series written and illustrated by Tatsuya Endo. While it
+                            hasn't been adapted into an anime as of my last update in January 2022, there has been
+                            considerable anticipation and speculation about the possibility of an anime adaptation due
+                            to its widespread popularity and engaging storyline.</p>
+                        <a href="#"
+                            class="text-white hover:bg-blue-500 mt-2 inline-block bg-blue-600 p-3 rounded-3xl ">Read
+                            more</a>
+                    </div>
+                </div>
+
+                <!-- Blog Post 3 -->
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="https://media.tenor.com/QHEDlrf37dYAAAAM/gojo-geto.gif" alt="Blog Post 3"
+                        class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2" style="font-family: cursive;">Chekout latest blogs on
+                            Jujutsu Kaisen</h3>
+                        <p class="text-gray-600">In the world of "Jujutsu Kaisen," supernatural forces and curses lurk
+                            in the shadows, threatening the lives of ordinary people. Adapted from Gege Akutami's manga,
+                            this anime takes viewers on a thrilling journey filled with action, suspense, and complex
+                            characters.</p>
+                        <a href="#"
+                            class="text-white hover:bg-blue-500 mt-2 inline-block bg-blue-600 p-3 rounded-3xl ">Read
+                            more</a>
+                    </div>
+                </div>
+                <!-- blog-4 -->
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src=https://media.tenor.com/3bR7q-I61tEAAAAM/fairy-tale-guild.gif" alt="Blog Post 3"
+                        class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2" style="font-family: cursive;">Chekout latest blogs on
+                            Faiy tail</h3>
+                        <p class="text-gray-600">Enter a world where magic reigns supreme, and friendships are forged in
+                            the heat of battle. "Fairy Tail," an anime series that has captured the hearts of millions
+                            worldwide, invites viewers on a spellbinding journey through the mystical land of Fiore.</p>
+                        <a href="#"
+                            class="text-white hover:bg-blue-500 mt-2 inline-block bg-blue-600 p-3 rounded-3xl ">Read
+                            more</a>
+                    </div>
+                </div>
+                <!-- blog-5 -->
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src=https://media.tenor.com/2ReUQeXk9psAAAAM/naruto.gif" alt="Blog Post 3"
+                        class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2" style="font-family: cursive;">Chekout latest blogs on
+                            Naruto</h3>
+                        <p class="text-gray-600">In the vibrant universe of Naruto, created by Masashi Kishimoto, a
+                            young ninja named Naruto Uzumaki embarks on an epic journey of self-discovery, friendship,
+                            and determination. Set in a world where shinobi wield extraordinary powers, Naruto dreams of
+                            becoming the strongest ninja and the leader of his village, known as the Hokage.</p>
+                        <a href="#"
+                            class="text-white hover:bg-blue-500 mt-2 inline-block bg-blue-600 p-3 rounded-3xl ">Read
+                            more</a>
+                    </div>
+                </div>
+                <!-- blog-6 -->
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="https://media.tenor.com/w7ThV57JRLkAAAAM/luffy.gif" alt="Blog Post 3"
+                        class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2" style="font-family: cursive;">Chekout latest blogs on
+                            One piece</h3>
+                        <p class="text-gray-600">"One Piece" is a captivating anime series that follows the adventures
+                            of Monkey D. Luffy and his diverse crew of pirates as they search for the legendary treasure
+                            known as One Piece. Set in a world of vast oceans and countless islands, Luffy dreams of
+                            becoming the Pirate King and ruling over the high seas. Along the way, he encounters
+                            formidable foes, forms powerful alliances, and discovers the true meaning of friendship and
+                            loyalty.</p>
+                        <a href="#"
+                            class="text-white hover:bg-blue-500 mt-2 inline-block bg-blue-600 p-3 rounded-3xl ">Read
+                            more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================
+KNOW-ABOUT-US-SECTION
+======================   -->
+    <section class="know-about-us rounded-t-3xl rounded-b-3xl">
+        <h1 class="text-center text-white text-4xl font-mono font-bold" style="text-shadow: 2px 4px 4px #000;">Why to
+            choose us</h1>
+        <div class="paras text-center mt-11">
+            <p class="text-white font-mono mt-5 text-3xl underline" style="font-family: cursive;"><b>Welcome to
+                    AnimeLand</b>
+                your ultimate destination for all things anime!</p>
+        </div>
+
+        <div class="all-paras text-center mt-6">
+            <p class="text-white font-mono md:text-xl">At AnimeWorld, we are a passionate team of otakus who live and
+                breathe anime. Our journey began as a small community of friends discussing our favorite shows, and it
+                has since grown into a vibrant platform where fans from around the globe come together to celebrate the
+                art of Japanese animation.</p>
+
+            <p class="text-white font-mono md:text-xl mt-9">Our Mission: To bring the colorful and dynamic world of
+                anime to fans everywhere. We strive to provide the latest news, in-depth reviews, and a welcoming
+                community for discussions and debates.</p>
+        </div>
+
+        <div class="point-para-heading mt-16">
+            <h1 class="text-start mx-5 text-white text-4xl font-mono font-bold" style="text-shadow: 2px 4px 4px #000;">
+                What We Offer:</h1>
+        </div>
+
+        <div class="point-paras">
+            <p class="text-white font-mono mx-5 md:text-xl mt-4"><b>Latest Anime News:</b> Stay up-to-date with the
+                newest releases, industry news, and events.
+
+            <p class="text-white font-mono mx-5 md:text-xl mt-4"><b>Reviews and Recommendations:</b> Expert insights on
+                both classic series and the latest hits.
+
+            <p class="text-white font-mono mx-5 md:text-xl mt-4"><b>Community Forums:</b> A place to connect with fellow
+                anime enthusiasts and make new friends.
+
+            <p class="text-white font-mono mx-5 md:text-xl mt-4"><b>Exclusive Interviews:</b> Hear directly from the
+                creators and voice actors who bring your favorite characters to life.
+
+            <p class="text-white font-mono mx-5 md:text-xl mt-4"><b>Merchandise:</b> A curated selection of high-quality
+                anime merchandise for collectors.
+        </div>
+
+        <div class="point-heading-2 mt-16">
+            <h1 class="text-start mx-5 text-white text-4xl font-mono font-bold" style="text-shadow: 2px 4px 4px #000;">
+                Our Values:</h1>
+        </div>
+
+        <div class="point-paras-2">
+            <p class="text-white font-mono mx-5 md:text-xl mt-4"><b>Respect:</b> For the art, the creators, and our
+                community members.
+
+            <p class="text-white font-mono mx-5 md:text-xl mt-4"><b>Passion:</b> A love for anime that drives everything
+                we do.
+
+            <p class="text-white font-mono mx-5 md:text-xl mt-4"><b>Inclusivity:</b> A welcoming space for fans of all
+                backgrounds.
+        </div>
+    </section>
+
+
+    <!-- ======================
+FOOTER-AREA
+======================   -->
+    <section class="footer-area rounded-t-3xl">
+        <footer class=" text-white py-8 ">
+            <div class="container mx-auto">
+                <div class="flex flex-wrap justify-between items-center">
+                    <!-- Additional Navigation Links -->
+                    <nav class="mb-8 mx-5">
+                        <a href="#" class="text-white hover:text-white mr-8 font-mono">About</a>
+                        <a href="#" class="text-white hover:text-white mr-8 font-mono">Services</a>
+                        <a href="#" class="text-white hover:text-white font-mono">Contact</a>
+                    </nav>
+
+                    <!-- Copyright Information -->
+                    <div class="text-white text-sm mx-5">&copy; 2024 AnimeLand. All rights reserved.</div>
+
+                    <!-- Privacy Policy and Terms of Service Links -->
+                    <div class="mb-4 mx-5">
+                        <a href="#" class="text-gray-300 hover:text-white mr-4">Privacy Policy</a>
+                        <a href="#" class="text-gray-300 hover:text-white">Terms of Service</a>
+                    </div>
+
+                    <!-- Social Media Icons -->
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="text-white text-sm mt-4 mx-6">
+                    <p class="font-mono">123 Main Street, Cityville, Country</p>
+                    <p class="font-mono">Email: info@xyz.com</p>
+                    <p class="font-mono">Phone: +123 456 7890</p>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script>
+
+        //js for mmobile navigation bar
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        menuToggle.addEventListener('click', () => {
+            if (menuToggle.getAttribute("aria-expanded") === "true") {
+                menuToggle.setAttribute("aria-expanded", "false");
+                document.getElementById("line1").setAttribute("d", "M4 6h16M4 12h16M4 18h16");
+            } else {
+                menuToggle.setAttribute("aria-expanded", "true");
+                document.getElementById("line1").setAttribute("d", "M6 18L18 6M6 6l12 12");
+            }
+            mobileMenu.classList.toggle('open');
+        });
+
+
+
+        //js for mmobile navigation bar
+        const slider = document.querySelector('.slider');
+        const slides = document.querySelectorAll('.slide');
+
+        let currentIndex = 0;
+
+        function goToSlide(index) {
+            currentIndex = index;
+            const offset = -currentIndex * 100;
+            slider.querySelector('.slides').style.transform = `translateX(${offset}%)`;
+        }
+
+        function nextSlide() {
+            if (currentIndex < slides.length - 1) {
+                goToSlide(currentIndex + 1);
+            } else {
+                goToSlide(0);
+            }
+        }
+
+        setInterval(nextSlide, 3000); // Change slide every 3 seconds
+
+
+    </script>
+
+
+
+</body>
+
+</html>
