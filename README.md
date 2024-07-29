@@ -20,8 +20,12 @@ Welcome to the **Anime Landing Page**! This is a beautifully designed landing pa
 
 ## 📲 Get in Touch
 
-- **Instagram**: [Follow me](https://www.instagram.com/__raunakk__/) 
-- **Discord**: [Join my server](https://discord.gg/SK9k6mdzvP)
+<a href="https://www.instagram.com/__raunakk__/" target="_blank">
+    <img src="https://img.shields.io/static/v1?message=Instagram&logo=instagram&label=&color=E4405F&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="instagram logo"  />
+  </a>
+<a href="https://discord.gg/SK9k6mdzvP" target="_blank">
+    <img src="https://img.shields.io/static/v1?message=Discord&logo=discord&label=&color=7289DA&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="discord logo"  />
+  </a>
 
 ## 🏷️ Acknowledgements
 - **Tailwind CSS** for its fantastic utility-first framework.
