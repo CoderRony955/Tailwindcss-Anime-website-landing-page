@@ -3,6 +3,8 @@
 
 Welcome to the **Anime Landing Page**! This is a beautifully designed landing page for anime enthusiasts, crafted with Tailwind CSS for responsiveness and a modern look. Explore the features and get the code from this repository!
 
+## Website 
+[Demo website](https://animearea.netlify.app/)
 
 ## 🚀 Features
 
